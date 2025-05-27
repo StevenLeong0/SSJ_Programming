@@ -1,0 +1,25 @@
+﻿@model SLLearning.Models.Enrolment;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EnrolForm</title>
+</head>
+<body>
+    <form asp-action="EnrolButton" method="post">
+        <div>
+            <label asp-for="MemberId">Your member id:</label>
+            <input asp-for="MemberId" />
+        </div>
+        <div>
+            <label asp-for="LessonId">Your lesson id:</label>
+            <input asp-for="LessonId" />
+        </div>
+                </div>
+        <button type="submit">Enrol</button>
+    </form>
+</body>
+</html>

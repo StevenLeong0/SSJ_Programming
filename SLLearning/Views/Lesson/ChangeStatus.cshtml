@@ -1,0 +1,29 @@
+﻿@model SLLearning.Models.Lesson;
+
+
+
+<form asp-action="ChangeStatus" method="post">
+    @Html.AntiForgeryToken()
+
+<div class="form-group">
+
+    <div>
+        <label asp-for="Id">Your lesson id:</label>
+        <input asp-for="Id" />
+    </div>
+
+
+
+    @Html.LabelFor(m => m.LessonStatus)
+    @Html.DropDownListFor(
+        m => m.LessonStatus,
+        Model.LessonStatusList,
+        new { @class = "form-control" }
+
+    )
+
+</div>
+
+    <button type="submit">Update status</button>
+</form>
+

@@ -1,0 +1,24 @@
+﻿@model SLLearning.Controllers.HomeController.PrivacyVM
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+
+<form asp-action="Privacy">
+
+        <input asp-for="Message" />
+
+        <hr />
+
+
+        <select asp-for="PaymentTypeId" asp-items="Model.PaymentTypes">
+            <option>Please Select One</option>
+        </select>
+
+
+
+    <input type="submit" value="Click Me" />
+</form>

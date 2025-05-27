@@ -1,0 +1,27 @@
+﻿@model List<LearningProgram>
+
+<h2>Search Learning Program</h2>
+
+<form method="get" asp-action="GetProgramByCategory">
+    <label for="CategoryId">Enter category ID:</label>
+    <input type="text" id="CategoryId" name="CategoryId" />
+    <button type="submit">Search</button>
+</form>
+
+
+<h2>Learning Program Details for member</h2>
+@if (Model != null && Model.Any())
+{
+    foreach (var program in Model)
+    {
+        <div style="margin-bottom: 20px;">
+            <h3>@program.Title</h3>
+            <p>@program.Description</p>
+            <p><strong>Start Date:</strong> @program.StartDate.ToShortDateString()</p>
+        </div>
+    }
+}
+else
+{
+    <p>No program found.</p>
+}

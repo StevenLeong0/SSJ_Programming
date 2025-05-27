@@ -1,0 +1,19 @@
+﻿@model SLLearning.Models.Enrolment
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div>
+        <h1>Thank you, @Model?.Member.FirstName!</h1>
+       
+    </div>
+    Click
+    <a asp-action="ListResponses">here</a> to see who is enrolled in which course.
+</body>
+</html>

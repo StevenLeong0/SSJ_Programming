@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SLLearning.Models.Enrolment>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Responses</title>
+</head>
+<body>
+    <h2>Here is the list of people enrolled</h2>
+    <table>
+        <thead>
+            <tr><th>MemberId</th><
+                <th>Member name</th>
+                <th>LessonId</th>
+        </thead>
+        <tbody>
+            @foreach (SLLearning.Models.Enrolment r in Model)
+            {
+                <tr>
+                    <td>@r.MemberId</td>
+                    <td>@r.Member.FirstName</td>
+                    <td>@r.LessonId</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
